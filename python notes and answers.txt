@@ -1,0 +1,940 @@
+attributes and methods in object
+object is working instance of class
+
+class->object(attributes and methods)
+
+.find() string
+.lower() string
+.upper()
+.replace()
+.index()
+.split() type = list
+
+.split() list
+
+string is a special kind of array that only has characters
+
+file object created when you open a file
+
+you have to close file in python
+
+C:\Users\adn6m\snowflake-tutorials
+
+open("C:/Users/adn6m/snowflake-tutorials/output_file2")
+
+read
+
+write
+
+append
+
+s.split('\n')[0].split(',')[-2]
+
+int s.split('\n')[0].split(',')[-2] :type casting
+
+s.split('\n')[0].split(',')[-2] + 1 :will now work
+
+convert 5th row 4 column rear end add +2
+
+test.file
+
+In [70]: f.save()
+Traceback (most recent call last):
+
+  File "<ipython-input-70-83868da01cd2>", line 1, in <module>
+    f.save()
+
+AttributeError: '_io.TextIOWrapper' object has no attribute 'save'
+
+
+In [71]: 
+
+In [71]: f.seek(10)
+Out[71]: 10
+
+In [72]: f.read(10)
+Out[72]: 'ue-collar,'
+
+In [73]: f.seek(0)
+Out[73]: 0
+
+In [74]: s = f.read(10)
+
+In [75]: s
+Out[75]: 'A001,44,bl'
+
+In [76]: f.seek(0)
+Out[76]: 0
+
+In [77]: f.read(10)
+Out[77]: 'A001,44,bl'
+
+In [78]: f.seek(0)
+Out[78]: 0
+
+In [79]: f.read()
+Out[79]: 'A001,44,blue-collar,married,basic.4y,unknown,yes,no,cellular,aug,thu,210,1,999,0\nA002,53,technician,married,unknown,no,no,no,cellular,nov,fri,138,1,999,0\nA003,28,management,single,university.degree,no,yes,no,cellular,jun,thu,339,3,6,2\nA004,39,services,married,high.school,no,no,no,cellular,apr,fri,185,2,999,0\nA005,55,retired,married,basic.4y,no,yes,no,cellular,aug,fri,137,1,3,1\nA006,30,management,divorced,basic.4y,no,yes,no,cellular,jul,tue,68,8,999,0\nA007,37,blue-collar,married,basic.4y,no,yes,no,cellular,may,thu,204,1,999,0\nA008,39,blue-collar,divorced,basic.9y,no,yes,no,cellular,may,fri,191,1,999,0\nA009,36,admin.,married,university.degree,no,no,no,cellular,jun,mon,174,1,3,1\nA010,27,blue-collar,single,basic.4y,no,yes,no,cellular,apr,thu,191,2,999,1\nA011,34,housemaid,single,university.degree,no,no,no,telephone,may,fri,62,2,999,0\nA012,41,management,married,university.degree,no,yes,no,cellular,aug,thu,789,1,999,0\nA013,55,management,married,university.degree,no,no,no,cellular,aug,mon,372,3,999,0'
+
+In [80]: f.seek(10)
+Out[80]: 10
+
+In [81]: f.seek(0)
+Out[81]: 0
+
+In [82]: f.read(10) = s
+  File "<ipython-input-82-031172312fda>", line 1
+    f.read(10) = s
+                  ^
+SyntaxError: can't assign to function call
+
+
+In [83]: 
+
+In [83]: s
+Out[83]: 'A001,44,bl'
+
+In [84]: f.seek(0)
+Out[84]: 0
+
+In [85]: f.read(10)
+Out[85]: 'A001,44,bl'
+
+In [86]: f.read()
+Out[86]: 'ue-collar,married,basic.4y,unknown,yes,no,cellular,aug,thu,210,1,999,0\nA002,53,technician,married,unknown,no,no,no,cellular,nov,fri,138,1,999,0\nA003,28,management,single,university.degree,no,yes,no,cellular,jun,thu,339,3,6,2\nA004,39,services,married,high.school,no,no,no,cellular,apr,fri,185,2,999,0\nA005,55,retired,married,basic.4y,no,yes,no,cellular,aug,fri,137,1,3,1\nA006,30,management,divorced,basic.4y,no,yes,no,cellular,jul,tue,68,8,999,0\nA007,37,blue-collar,married,basic.4y,no,yes,no,cellular,may,thu,204,1,999,0\nA008,39,blue-collar,divorced,basic.9y,no,yes,no,cellular,may,fri,191,1,999,0\nA009,36,admin.,married,university.degree,no,no,no,cellular,jun,mon,174,1,3,1\nA010,27,blue-collar,single,basic.4y,no,yes,no,cellular,apr,thu,191,2,999,1\nA011,34,housemaid,single,university.degree,no,no,no,telephone,may,fri,62,2,999,0\nA012,41,management,married,university.degree,no,yes,no,cellular,aug,thu,789,1,999,0\nA013,55,management,married,university.degree,no,no,no,cellular,aug,mon,372,3,999,0'
+
+In [87]: f.seek(0)
+Out[87]: 0
+
+In [88]: f.seek(10)
+Out[88]: 10
+
+In [89]: s = f.read(10)
+
+In [90]: s
+Out[90]: 'ue-collar,'
+
+In [91]: f.seek(0)
+Out[91]: 0
+
+In [92]: a = f.read()
+
+In [93]: a
+Out[93]: 'A001,44,blue-collar,married,basic.4y,unknown,yes,no,cellular,aug,thu,210,1,999,0\nA002,53,technician,married,unknown,no,no,no,cellular,nov,fri,138,1,999,0\nA003,28,management,single,university.degree,no,yes,no,cellular,jun,thu,339,3,6,2\nA004,39,services,married,high.school,no,no,no,cellular,apr,fri,185,2,999,0\nA005,55,retired,married,basic.4y,no,yes,no,cellular,aug,fri,137,1,3,1\nA006,30,management,divorced,basic.4y,no,yes,no,cellular,jul,tue,68,8,999,0\nA007,37,blue-collar,married,basic.4y,no,yes,no,cellular,may,thu,204,1,999,0\nA008,39,blue-collar,divorced,basic.9y,no,yes,no,cellular,may,fri,191,1,999,0\nA009,36,admin.,married,university.degree,no,no,no,cellular,jun,mon,174,1,3,1\nA010,27,blue-collar,single,basic.4y,no,yes,no,cellular,apr,thu,191,2,999,1\nA011,34,housemaid,single,university.degree,no,no,no,telephone,may,fri,62,2,999,0\nA012,41,management,married,university.degree,no,yes,no,cellular,aug,thu,789,1,999,0\nA013,55,management,married,university.degree,no,no,no,cellular,aug,mon,372,3,999,0'
+
+In [94]: a.split("\n")
+Out[94]: 
+['A001,44,blue-collar,married,basic.4y,unknown,yes,no,cellular,aug,thu,210,1,999,0',
+ 'A002,53,technician,married,unknown,no,no,no,cellular,nov,fri,138,1,999,0',
+ 'A003,28,management,single,university.degree,no,yes,no,cellular,jun,thu,339,3,6,2',
+ 'A004,39,services,married,high.school,no,no,no,cellular,apr,fri,185,2,999,0',
+ 'A005,55,retired,married,basic.4y,no,yes,no,cellular,aug,fri,137,1,3,1',
+ 'A006,30,management,divorced,basic.4y,no,yes,no,cellular,jul,tue,68,8,999,0',
+ 'A007,37,blue-collar,married,basic.4y,no,yes,no,cellular,may,thu,204,1,999,0',
+ 'A008,39,blue-collar,divorced,basic.9y,no,yes,no,cellular,may,fri,191,1,999,0',
+ 'A009,36,admin.,married,university.degree,no,no,no,cellular,jun,mon,174,1,3,1',
+ 'A010,27,blue-collar,single,basic.4y,no,yes,no,cellular,apr,thu,191,2,999,1',
+ 'A011,34,housemaid,single,university.degree,no,no,no,telephone,may,fri,62,2,999,0',
+ 'A012,41,management,married,university.degree,no,yes,no,cellular,aug,thu,789,1,999,0',
+ 'A013,55,management,married,university.degree,no,no,no,cellular,aug,mon,372,3,999,0']
+
+In [95]: a
+Out[95]: 'A001,44,blue-collar,married,basic.4y,unknown,yes,no,cellular,aug,thu,210,1,999,0\nA002,53,technician,married,unknown,no,no,no,cellular,nov,fri,138,1,999,0\nA003,28,management,single,university.degree,no,yes,no,cellular,jun,thu,339,3,6,2\nA004,39,services,married,high.school,no,no,no,cellular,apr,fri,185,2,999,0\nA005,55,retired,married,basic.4y,no,yes,no,cellular,aug,fri,137,1,3,1\nA006,30,management,divorced,basic.4y,no,yes,no,cellular,jul,tue,68,8,999,0\nA007,37,blue-collar,married,basic.4y,no,yes,no,cellular,may,thu,204,1,999,0\nA008,39,blue-collar,divorced,basic.9y,no,yes,no,cellular,may,fri,191,1,999,0\nA009,36,admin.,married,university.degree,no,no,no,cellular,jun,mon,174,1,3,1\nA010,27,blue-collar,single,basic.4y,no,yes,no,cellular,apr,thu,191,2,999,1\nA011,34,housemaid,single,university.degree,no,no,no,telephone,may,fri,62,2,999,0\nA012,41,management,married,university.degree,no,yes,no,cellular,aug,thu,789,1,999,0\nA013,55,management,married,university.degree,no,no,no,cellular,aug,mon,372,3,999,0'
+
+In [96]: b = a.split("\n")
+
+In [97]: b[0]
+Out[97]: 'A001,44,blue-collar,married,basic.4y,unknown,yes,no,cellular,aug,thu,210,1,999,0'
+
+In [98]: type b[0]
+  File "<ipython-input-98-23fe223288a1>", line 1
+    type b[0]
+         ^
+SyntaxError: invalid syntax
+
+
+In [99]: 
+
+In [99]: type (b[0])
+Out[99]: str
+
+In [100]: c = b[0]
+
+In [101]: c
+Out[101]: 'A001,44,blue-collar,married,basic.4y,unknown,yes,no,cellular,aug,thu,210,1,999,0'
+
+In [102]: c.split(",")
+Out[102]: 
+['A001',
+ '44',
+ 'blue-collar',
+ 'married',
+ 'basic.4y',
+ 'unknown',
+ 'yes',
+ 'no',
+ 'cellular',
+ 'aug',
+ 'thu',
+ '210',
+ '1',
+ '999',
+ '0']
+
+In [103]: a
+Out[103]: 'A001,44,blue-collar,married,basic.4y,unknown,yes,no,cellular,aug,thu,210,1,999,0\nA002,53,technician,married,unknown,no,no,no,cellular,nov,fri,138,1,999,0\nA003,28,management,single,university.degree,no,yes,no,cellular,jun,thu,339,3,6,2\nA004,39,services,married,high.school,no,no,no,cellular,apr,fri,185,2,999,0\nA005,55,retired,married,basic.4y,no,yes,no,cellular,aug,fri,137,1,3,1\nA006,30,management,divorced,basic.4y,no,yes,no,cellular,jul,tue,68,8,999,0\nA007,37,blue-collar,married,basic.4y,no,yes,no,cellular,may,thu,204,1,999,0\nA008,39,blue-collar,divorced,basic.9y,no,yes,no,cellular,may,fri,191,1,999,0\nA009,36,admin.,married,university.degree,no,no,no,cellular,jun,mon,174,1,3,1\nA010,27,blue-collar,single,basic.4y,no,yes,no,cellular,apr,thu,191,2,999,1\nA011,34,housemaid,single,university.degree,no,no,no,telephone,may,fri,62,2,999,0\nA012,41,management,married,university.degree,no,yes,no,cellular,aug,thu,789,1,999,0\nA013,55,management,married,university.degree,no,no,no,cellular,aug,mon,372,3,999,0'
+
+In [104]: b
+Out[104]: 
+['A001,44,blue-collar,married,basic.4y,unknown,yes,no,cellular,aug,thu,210,1,999,0',
+ 'A002,53,technician,married,unknown,no,no,no,cellular,nov,fri,138,1,999,0',
+ 'A003,28,management,single,university.degree,no,yes,no,cellular,jun,thu,339,3,6,2',
+ 'A004,39,services,married,high.school,no,no,no,cellular,apr,fri,185,2,999,0',
+ 'A005,55,retired,married,basic.4y,no,yes,no,cellular,aug,fri,137,1,3,1',
+ 'A006,30,management,divorced,basic.4y,no,yes,no,cellular,jul,tue,68,8,999,0',
+ 'A007,37,blue-collar,married,basic.4y,no,yes,no,cellular,may,thu,204,1,999,0',
+ 'A008,39,blue-collar,divorced,basic.9y,no,yes,no,cellular,may,fri,191,1,999,0',
+ 'A009,36,admin.,married,university.degree,no,no,no,cellular,jun,mon,174,1,3,1',
+ 'A010,27,blue-collar,single,basic.4y,no,yes,no,cellular,apr,thu,191,2,999,1',
+ 'A011,34,housemaid,single,university.degree,no,no,no,telephone,may,fri,62,2,999,0',
+ 'A012,41,management,married,university.degree,no,yes,no,cellular,aug,thu,789,1,999,0',
+ 'A013,55,management,married,university.degree,no,no,no,cellular,aug,mon,372,3,999,0']
+
+In [105]: c
+Out[105]: 'A001,44,blue-collar,married,basic.4y,unknown,yes,no,cellular,aug,thu,210,1,999,0'
+
+In [106]: d = c.split(",")
+
+In [107]: d
+Out[107]: 
+['A001',
+ '44',
+ 'blue-collar',
+ 'married',
+ 'basic.4y',
+ 'unknown',
+ 'yes',
+ 'no',
+ 'cellular',
+ 'aug',
+ 'thu',
+ '210',
+ '1',
+ '999',
+ '0']
+
+In [108]: d[0]
+Out[108]: 'A001'
+
+In [109]: b
+Out[109]: 
+['A001,44,blue-collar,married,basic.4y,unknown,yes,no,cellular,aug,thu,210,1,999,0',
+ 'A002,53,technician,married,unknown,no,no,no,cellular,nov,fri,138,1,999,0',
+ 'A003,28,management,single,university.degree,no,yes,no,cellular,jun,thu,339,3,6,2',
+ 'A004,39,services,married,high.school,no,no,no,cellular,apr,fri,185,2,999,0',
+ 'A005,55,retired,married,basic.4y,no,yes,no,cellular,aug,fri,137,1,3,1',
+ 'A006,30,management,divorced,basic.4y,no,yes,no,cellular,jul,tue,68,8,999,0',
+ 'A007,37,blue-collar,married,basic.4y,no,yes,no,cellular,may,thu,204,1,999,0',
+ 'A008,39,blue-collar,divorced,basic.9y,no,yes,no,cellular,may,fri,191,1,999,0',
+ 'A009,36,admin.,married,university.degree,no,no,no,cellular,jun,mon,174,1,3,1',
+ 'A010,27,blue-collar,single,basic.4y,no,yes,no,cellular,apr,thu,191,2,999,1',
+ 'A011,34,housemaid,single,university.degree,no,no,no,telephone,may,fri,62,2,999,0',
+ 'A012,41,management,married,university.degree,no,yes,no,cellular,aug,thu,789,1,999,0',
+ 'A013,55,management,married,university.degree,no,no,no,cellular,aug,mon,372,3,999,0']
+
+In [110]: b[0]
+Out[110]: 'A001,44,blue-collar,married,basic.4y,unknown,yes,no,cellular,aug,thu,210,1,999,0'
+
+In [111]: b
+Out[111]: 
+['A001,44,blue-collar,married,basic.4y,unknown,yes,no,cellular,aug,thu,210,1,999,0',
+ 'A002,53,technician,married,unknown,no,no,no,cellular,nov,fri,138,1,999,0',
+ 'A003,28,management,single,university.degree,no,yes,no,cellular,jun,thu,339,3,6,2',
+ 'A004,39,services,married,high.school,no,no,no,cellular,apr,fri,185,2,999,0',
+ 'A005,55,retired,married,basic.4y,no,yes,no,cellular,aug,fri,137,1,3,1',
+ 'A006,30,management,divorced,basic.4y,no,yes,no,cellular,jul,tue,68,8,999,0',
+ 'A007,37,blue-collar,married,basic.4y,no,yes,no,cellular,may,thu,204,1,999,0',
+ 'A008,39,blue-collar,divorced,basic.9y,no,yes,no,cellular,may,fri,191,1,999,0',
+ 'A009,36,admin.,married,university.degree,no,no,no,cellular,jun,mon,174,1,3,1',
+ 'A010,27,blue-collar,single,basic.4y,no,yes,no,cellular,apr,thu,191,2,999,1',
+ 'A011,34,housemaid,single,university.degree,no,no,no,telephone,may,fri,62,2,999,0',
+ 'A012,41,management,married,university.degree,no,yes,no,cellular,aug,thu,789,1,999,0',
+ 'A013,55,management,married,university.degree,no,no,no,cellular,aug,mon,372,3,999,0']
+
+In [112]: c
+Out[112]: 'A001,44,blue-collar,married,basic.4y,unknown,yes,no,cellular,aug,thu,210,1,999,0'
+
+In [113]: b
+Out[113]: 
+['A001,44,blue-collar,married,basic.4y,unknown,yes,no,cellular,aug,thu,210,1,999,0',
+ 'A002,53,technician,married,unknown,no,no,no,cellular,nov,fri,138,1,999,0',
+ 'A003,28,management,single,university.degree,no,yes,no,cellular,jun,thu,339,3,6,2',
+ 'A004,39,services,married,high.school,no,no,no,cellular,apr,fri,185,2,999,0',
+ 'A005,55,retired,married,basic.4y,no,yes,no,cellular,aug,fri,137,1,3,1',
+ 'A006,30,management,divorced,basic.4y,no,yes,no,cellular,jul,tue,68,8,999,0',
+ 'A007,37,blue-collar,married,basic.4y,no,yes,no,cellular,may,thu,204,1,999,0',
+ 'A008,39,blue-collar,divorced,basic.9y,no,yes,no,cellular,may,fri,191,1,999,0',
+ 'A009,36,admin.,married,university.degree,no,no,no,cellular,jun,mon,174,1,3,1',
+ 'A010,27,blue-collar,single,basic.4y,no,yes,no,cellular,apr,thu,191,2,999,1',
+ 'A011,34,housemaid,single,university.degree,no,no,no,telephone,may,fri,62,2,999,0',
+ 'A012,41,management,married,university.degree,no,yes,no,cellular,aug,thu,789,1,999,0',
+ 'A013,55,management,married,university.degree,no,no,no,cellular,aug,mon,372,3,999,0']
+
+In [114]: e = b[4]
+
+In [115]: e
+Out[115]: 'A005,55,retired,married,basic.4y,no,yes,no,cellular,aug,fri,137,1,3,1'
+
+In [116]: g = e.split(",")
+
+In [117]: g
+Out[117]: 
+['A005',
+ '55',
+ 'retired',
+ 'married',
+ 'basic.4y',
+ 'no',
+ 'yes',
+ 'no',
+ 'cellular',
+ 'aug',
+ 'fri',
+ '137',
+ '1',
+ '3',
+ '1']
+
+In [118]: h = int g[-4]
+  File "<ipython-input-118-0942b3b9419d>", line 1
+    h = int g[-4]
+            ^
+SyntaxError: invalid syntax
+
+
+In [119]: 
+
+In [119]: h
+Traceback (most recent call last):
+
+  File "<ipython-input-119-244aa7266b3f>", line 1, in <module>
+    h
+
+NameError: name 'h' is not defined
+
+
+In [120]: 
+
+In [120]: g
+Out[120]: 
+['A005',
+ '55',
+ 'retired',
+ 'married',
+ 'basic.4y',
+ 'no',
+ 'yes',
+ 'no',
+ 'cellular',
+ 'aug',
+ 'fri',
+ '137',
+ '1',
+ '3',
+ '1']
+
+In [121]: type g
+  File "<ipython-input-121-ec16799cbbd5>", line 1
+    type g
+         ^
+SyntaxError: invalid syntax
+
+
+In [122]: 
+
+In [122]: type(g)
+Out[122]: list
+
+In [123]: int (g)
+Traceback (most recent call last):
+
+  File "<ipython-input-123-33b071e0fdb9>", line 1, in <module>
+    int (g)
+
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+
+
+In [124]: 
+
+In [124]: g
+Out[124]: 
+['A005',
+ '55',
+ 'retired',
+ 'married',
+ 'basic.4y',
+ 'no',
+ 'yes',
+ 'no',
+ 'cellular',
+ 'aug',
+ 'fri',
+ '137',
+ '1',
+ '3',
+ '1']
+
+In [125]: h = int(g)
+Traceback (most recent call last):
+
+  File "<ipython-input-125-01370b46d4a5>", line 1, in <module>
+    h = int(g)
+
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+
+
+In [126]: 
+
+In [126]: h = int(g[-4])
+
+In [127]: h + 1
+Out[127]: 138
+
+In [128]: h + 2
+Out[128]: 139
+
+In [129]: answer = h+2
+
+In [130]: answer
+Out[130]: 139
+
+In [131]: cool = open("test.file", "w")
+
+In [132]: answer
+Out[132]: 139
+
+In [133]: cool.close()
+
+In [134]: open("C:/Users/adn6m/test.file")
+Out[134]: <_io.TextIOWrapper name='C:/Users/adn6m/test.file' mode='r' encoding='cp1252'>
+
+In [135]: f1 = open("C:/Users/adn6m/test.file")
+
+In [136]: f1.read()
+Out[136]: ''
+
+In [137]: realanswer = int(answer)
+
+In [138]: realanswer
+Out[138]: 139
+
+In [139]: type(realanswer)
+Out[139]: int
+
+In [140]: cool = open("test.file", "a")
+     ...: f.write(realanswer)
+     ...: f.close()
+Traceback (most recent call last):
+
+  File "<ipython-input-140-68d270d4d567>", line 2, in <module>
+    f.write(realanswer)
+
+TypeError: write() argument must be str, not int
+
+
+In [141]: 
+
+In [141]: type (realanswer)
+Out[141]: int
+
+In [142]: realanswer = string(answer)
+Traceback (most recent call last):
+
+  File "<ipython-input-142-404f2c7bf855>", line 1, in <module>
+    realanswer = string(answer)
+
+NameError: name 'string' is not defined
+
+
+In [143]: 
+
+In [143]: realanswer = str(answer)
+
+In [144]: cool = open("test.file", "a")
+     ...: f.write(realanswer)
+     ...: f.close()
+Traceback (most recent call last):
+
+  File "<ipython-input-144-68d270d4d567>", line 2, in <module>
+    f.write(realanswer)
+
+UnsupportedOperation: not writable
+
+
+In [145]: 
+
+In [145]: cool = open("test.file", "w")
+     ...: f.write(realanswer)
+     ...: f.close()
+Traceback (most recent call last):
+
+  File "<ipython-input-145-07a820916492>", line 2, in <module>
+    f.write(realanswer)
+
+UnsupportedOperation: not writable
+
+
+In [146]: 
+
+In [146]: cool = open("test.file", "w")
+     ...: f.write("realanswer")
+     ...: f.close()
+Traceback (most recent call last):
+
+  File "<ipython-input-146-cbbf70c11879>", line 2, in <module>
+    f.write("realanswer")
+
+UnsupportedOperation: not writable
+
+
+In [147]: 
+
+In [147]: realanswer
+Out[147]: '139'
+
+In [148]: cool = open("test.file", "w")
+     ...: f.write(realanswer)
+     ...: f.close()
+Traceback (most recent call last):
+
+  File "<ipython-input-148-07a820916492>", line 2, in <module>
+    f.write(realanswer)
+
+UnsupportedOperation: not writable
+
+
+In [149]: 
+
+In [149]: cool = open("test.file, "w")
+  File "<ipython-input-149-d22821787afd>", line 1
+    cool = open("test.file, "w")
+                             ^
+SyntaxError: invalid syntax
+
+
+In [150]: 
+
+In [150]: cool = open("test.file", "w")
+
+In [151]: cool
+Out[151]: <_io.TextIOWrapper name='test.file' mode='w' encoding='cp1252'>
+
+In [152]: cool.write(realanswer)
+Out[152]: 3
+
+In [153]: cool.close
+Out[153]: <function TextIOWrapper.close()>
+
+In [154]: cool.close()
+
+//MORE NOTES\\
+
+module called request.  One module: input python, it outputs http communication (get, put, API interface)
+
+yum install linux
+
+pip instal python
+
+a request is api module
+
++ 2 to 177
+
+import request
+Traceback (most recent call last):
+
+  File "<ipython-input-155-e392607f0c42>", line 1, in <module>
+    import request
+
+ModuleNotFoundError: No module named 'request'
+
+
+
+
+import requests
+
+import pandas
+
+import numpy
+
+import scipi
+Traceback (most recent call last):
+
+  File "<ipython-input-159-44b77a453e84>", line 1, in <module>
+    import scipi
+
+ModuleNotFoundError: No module named 'scipi'
+
+
+
+
+import scipy
+
+import matplotlib
+
+requests.get("https://raw.githubusercontent.com/becloudready/snowflake-tutorials/master/dataset/employees01.csv")
+Out[162]: <Response [200]>
+
+r = https://raw.githubusercontent.com/becloudready/snowflake-tutorials/master/dataset/employees01.csv
+  File "<ipython-input-163-f7905f53f424>", line 1
+    r = https://raw.githubusercontent.com/becloudready/snowflake-tutorials/master/dataset/employees01.csv
+             ^
+SyntaxError: invalid syntax
+
+
+
+
+r = requests.get("https://raw.githubusercontent.com/becloudready/snowflake-tutorials/master/dataset/employees01.csv")
+
+r
+Out[165]: <Response [200]>
+
+r.status_code
+Out[166]: 200
+
+r.text
+Out[167]: 'Lem,Boissier,lboissier@sf_tuts.com,3002 Ruskin Trail,Shikarpur,8/25/2017\nIain,Hanks,ihanks1@sf_tuts.com,2 Pankratz Hill,Monte-Carlo,12/10/2017\nAvo,Laudham,alaudham2@sf_tuts.com,6948 Debs Park,Prazm�w,10/18/2017\nEmili,Cornner,ecornner3@sf_tuts.com,177 Magdeline Avenue,Norrk�ping,8/13/2017\nHarrietta,Goolding,hgoolding4@sf_tuts.com,450 Heath Trail,Osielsko,11/27/2017'
+
+supercool = r.text
+
+supercool
+Out[169]: 'Lem,Boissier,lboissier@sf_tuts.com,3002 Ruskin Trail,Shikarpur,8/25/2017\nIain,Hanks,ihanks1@sf_tuts.com,2 Pankratz Hill,Monte-Carlo,12/10/2017\nAvo,Laudham,alaudham2@sf_tuts.com,6948 Debs Park,Prazm�w,10/18/2017\nEmili,Cornner,ecornner3@sf_tuts.com,177 Magdeline Avenue,Norrk�ping,8/13/2017\nHarrietta,Goolding,hgoolding4@sf_tuts.com,450 Heath Trail,Osielsko,11/27/2017'
+
+man = supercool.split("\n")
+
+man
+Out[171]: 
+['Lem,Boissier,lboissier@sf_tuts.com,3002 Ruskin Trail,Shikarpur,8/25/2017',
+ 'Iain,Hanks,ihanks1@sf_tuts.com,2 Pankratz Hill,Monte-Carlo,12/10/2017',
+ 'Avo,Laudham,alaudham2@sf_tuts.com,6948 Debs Park,Prazm�w,10/18/2017',
+ 'Emili,Cornner,ecornner3@sf_tuts.com,177 Magdeline Avenue,Norrk�ping,8/13/2017',
+ 'Harrietta,Goolding,hgoolding4@sf_tuts.com,450 Heath Trail,Osielsko,11/27/2017']
+
+man[-2]
+Out[172]: 'Emili,Cornner,ecornner3@sf_tuts.com,177 Magdeline Avenue,Norrk�ping,8/13/2017'
+
+cool2 = open("test.file_2", "w")
+cool2.write(man[2])
+cool2.close()
+Traceback (most recent call last):
+
+  File "<ipython-input-173-a3a962221994>", line 2, in <module>
+    cool2.write(man[2])
+
+  File "C:\Users\adn6m\Anaconda3\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+
+UnicodeEncodeError: 'charmap' codec can't encode character '\u017c' in position 52: character maps to <undefined>
+
+
+
+
+answer2 = man[2]
+
+answer2
+Out[175]: 'Avo,Laudham,alaudham2@sf_tuts.com,6948 Debs Park,Prazm�w,10/18/2017'
+
+answer2 = man[-2]
+
+answer2
+Out[177]: 'Emili,Cornner,ecornner3@sf_tuts.com,177 Magdeline Avenue,Norrk�ping,8/13/2017'
+
+cool2 = open("test.file_2", "w")
+cool2.write(answer2)
+cool2.close()
+
+runfile('C:/Users/adn6m/.spyder-py3/temp.py', wdir='C:/Users/adn6m/.spyder-py3')
+Traceback (most recent call last):
+
+  File "<ipython-input-179-63ede95c7db9>", line 1, in <module>
+    runfile('C:/Users/adn6m/.spyder-py3/temp.py', wdir='C:/Users/adn6m/.spyder-py3')
+
+  File "C:\Users\adn6m\Anaconda3\lib\site-packages\spyder_kernels\customize\spydercustomize.py", line 786, in runfile
+    execfile(filename, namespace)
+
+  File "C:\Users\adn6m\Anaconda3\lib\site-packages\spyder_kernels\customize\spydercustomize.py", line 110, in execfile
+    exec(compile(f.read(), filename, 'exec'), namespace)
+
+  File "C:/Users/adn6m/.spyder-py3/temp.py", line 8, in <module>
+    firstp.py
+
+NameError: name 'firstp' is not defined
+
+
+
+
+runfile('C:/Users/adn6m/firstp.py', wdir='C:/Users/adn6m')
+
+curl -X GET \
+  https://sevenone.s3.amazonaws.com/employees01.csv \
+  -H 'Authorization: AWS4-HMAC-SHA256 Credential=AKIASDBDPENSKAG7BMDH/20190703/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=4d649e6a79a6b3e66a4ce3c2a18177f8db793c31be2ca138b30ecbe173477d81' \
+  -H 'Host: sevenone.s3.amazonaws.com' \
+  -H 'Postman-Token: 4405c751-bbda-46fa-bee2-ad05a766f9d3' \
+  -H 'X-Amz-Content-Sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' \
+  -H 'X-Amz-Date: 20190703T185947Z' \
+  -H 'cache-control: no-cache'
+  File "<ipython-input-181-60feb084a90a>", line 1
+    curl -X GET \
+              ^
+SyntaxError: invalid syntax
+
+
+
+
+import requests
+
+url = "https://sevenone.s3.amazonaws.com/employees01.csv"
+
+headers = {
+    'Host': "sevenone.s3.amazonaws.com",
+    'X-Amz-Content-Sha256': "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    'X-Amz-Date': "20190703T185947Z",
+    'Authorization': "AWS4-HMAC-SHA256 Credential=AKIASDBDPENSKAG7BMDH/20190703/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=4d649e6a79a6b3e66a4ce3c2a18177f8db793c31be2ca138b30ecbe173477d81",
+    'cache-control': "no-cache",
+    'Postman-Token': "3e86d773-4fa8-4588-9586-560c026d1de8"
+    }
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
+Lem,Boissier,lboissier@sf_tuts.com,3002 Ruskin Trail,Shikārpur,8/25/2017
+Iain,Hanks,ihanks1@sf_tuts.com,2 Pankratz Hill,Monte-Carlo,12/10/2017
+Avo,Laudham,alaudham2@sf_tuts.com,6948 Debs Park,Prażmów,10/18/2017
+Emili,Cornner,ecornner3@sf_tuts.com,177 Magdeline Avenue,Norrköping,8/13/2017
+Harrietta,Goolding,hgoolding4@sf_tuts.com,450 Heath Trail,Osielsko,11/27/2017
+
+import requests
+
+url = "https://sevenone.s3.amazonaws.com/employees01.csv"
+
+headers = {
+    'Host': "sevenone.s3.amazonaws.com",
+    'X-Amz-Content-Sha256': "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    'X-Amz-Date': "20190703T185947Z",
+    'Authorization': "AWS4-HMAC-SHA256 Credential=AKIASDBDPENSKAG7BMDH/20190703/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=4d649e6a79a6b3e66a4ce3c2a18177f8db793c31be2ca138b30ecbe173477d81",
+    'cache-control': "no-cache",
+    'Postman-Token': "3e86d773-4fa8-4588-9586-560c026d1de8"
+    }
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
+Lem,Boissier,lboissier@sf_tuts.com,3002 Ruskin Trail,Shikārpur,8/25/2017
+Iain,Hanks,ihanks1@sf_tuts.com,2 Pankratz Hill,Monte-Carlo,12/10/2017
+Avo,Laudham,alaudham2@sf_tuts.com,6948 Debs Park,Prażmów,10/18/2017
+Emili,Cornner,ecornner3@sf_tuts.com,177 Magdeline Avenue,Norrköping,8/13/2017
+Harrietta,Goolding,hgoolding4@sf_tuts.com,450 Heath Trail,Osielsko,11/27/2017
+
+import requests
+
+url = "https://sevenone.s3.amazonaws.com/employees01.csv"
+
+headers = {
+    'Host': "sevenone.s3.amazonaws.com",
+    'X-Amz-Content-Sha256': "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    'X-Amz-Date': "20190703T185947Z",
+    'Authorization': "AWS4-HMAC-SHA256 Credential=AKIASDBDPENSKAG7BMDH/20190703/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=4d649e6a79a6b3e66a4ce3c2a18177f8db793c31be2ca138b30ecbe173477d81",
+    'cache-control': "no-cache",
+    'Postman-Token': "3e86d773-4fa8-4588-9586-560c026d1de8"
+    }
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text) = yes
+  File "<ipython-input-184-69d121612e69>", line 16
+    print(response.text) = yes
+                              ^
+SyntaxError: can't assign to function call
+
+
+
+
+response.text
+Out[185]: 'Lem,Boissier,lboissier@sf_tuts.com,3002 Ruskin Trail,Shik�\x81rpur,8/25/2017\nIain,Hanks,ihanks1@sf_tuts.com,2 Pankratz Hill,Monte-Carlo,12/10/2017\nAvo,Laudham,alaudham2@sf_tuts.com,6948 Debs Park,Prażmów,10/18/2017\nEmili,Cornner,ecornner3@sf_tuts.com,177 Magdeline Avenue,Norrköping,8/13/2017\nHarrietta,Goolding,hgoolding4@sf_tuts.com,450 Heath Trail,Osielsko,11/27/2017'
+
+test1 = response.text
+
+test1
+Out[187]: 'Lem,Boissier,lboissier@sf_tuts.com,3002 Ruskin Trail,Shik�\x81rpur,8/25/2017\nIain,Hanks,ihanks1@sf_tuts.com,2 Pankratz Hill,Monte-Carlo,12/10/2017\nAvo,Laudham,alaudham2@sf_tuts.com,6948 Debs Park,Prażmów,10/18/2017\nEmili,Cornner,ecornner3@sf_tuts.com,177 Magdeline Avenue,Norrköping,8/13/2017\nHarrietta,Goolding,hgoolding4@sf_tuts.com,450 Heath Trail,Osielsko,11/27/2017'
+
+test2 = test1.split("\n")
+
+test2
+Out[189]: 
+['Lem,Boissier,lboissier@sf_tuts.com,3002 Ruskin Trail,Shik�\x81rpur,8/25/2017',
+ 'Iain,Hanks,ihanks1@sf_tuts.com,2 Pankratz Hill,Monte-Carlo,12/10/2017',
+ 'Avo,Laudham,alaudham2@sf_tuts.com,6948 Debs Park,Prażmów,10/18/2017',
+ 'Emili,Cornner,ecornner3@sf_tuts.com,177 Magdeline Avenue,Norrköping,8/13/2017',
+ 'Harrietta,Goolding,hgoolding4@sf_tuts.com,450 Heath Trail,Osielsko,11/27/2017']
+
+test3 = test2.split(",")
+Traceback (most recent call last):
+
+  File "<ipython-input-190-02ca89c59f14>", line 1, in <module>
+    test3 = test2.split(",")
+
+AttributeError: 'list' object has no attribute 'split'
+
+
+
+
+test2[2]
+Out[191]: 'Avo,Laudham,alaudham2@sf_tuts.com,6948 Debs Park,Prażmów,10/18/2017'
+
+test2[-2]
+Out[192]: 'Emili,Cornner,ecornner3@sf_tuts.com,177 Magdeline Avenue,Norrköping,8/13/2017'
+
+test3 = test2[-2]
+
+test3
+Out[194]: 'Emili,Cornner,ecornner3@sf_tuts.com,177 Magdeline Avenue,Norrköping,8/13/2017'
+
+test4 = test3.split(",")
+
+test4
+Out[196]: 
+['Emili',
+ 'Cornner',
+ 'ecornner3@sf_tuts.com',
+ '177 Magdeline Avenue',
+ 'Norrköping',
+ '8/13/2017']
+
+test4[3]
+Out[197]: '177 Magdeline Avenue'
+
+test5 = test4[3]
+
+test5
+Out[199]: '177 Magdeline Avenue'
+
+test6 = test5.split("177")
+
+test6
+Out[201]: ['', ' Magdeline Avenue']
+
+test6 = test5.split("Magdeline Avenue")
+
+test6
+Out[203]: ['177 ', '']
+
+test6[0]
+Out[204]: '177 '
+
+test7 = test6[0]
+
+type (test7)
+Out[206]: str
+
+test8 = int test7
+  File "<ipython-input-207-670c202a39c8>", line 1
+    test8 = int test7
+                    ^
+SyntaxError: invalid syntax
+
+
+
+
+test8 = int (test7)
+
+test8 + 2
+Out[209]: 179
+
+test9 = test8 + 2
+
+test9
+Out[211]: 179
+
+list1 = response.text
+lastSecondRow = list1.split('\n')[-2]
+forthElement = lastSecondRow.split(',')[3]
+oneSevenSeven = int(forthElement.split(' ')[0]) + 2
+
+oneSevenSeven
+Out[213]: 179
+
+pwd
+Out[214]: 'C:\\Users\\adn6m'
+
+getlogin()
+Traceback (most recent call last):
+
+  File "<ipython-input-215-a8df2ec2ebba>", line 1, in <module>
+    getlogin()
+
+NameError: name 'getlogin' is not defined
+
+
+
+
+os.getlogin()
+Traceback (most recent call last):
+
+  File "<ipython-input-216-0f8aa747d9ad>", line 1, in <module>
+    os.getlogin()
+
+NameError: name 'os' is not defined
+
+
+
+
+import os
+
+getlogin()
+Traceback (most recent call last):
+
+  File "<ipython-input-218-a8df2ec2ebba>", line 1, in <module>
+    getlogin()
+
+NameError: name 'getlogin' is not defined
+
+
+
+
+os.getlogin()
+Out[219]: 'adn6m'
+
+import datetime
+
+x = datetime.datetime.now()
+
+x
+Out[222]: datetime.datetime(2019, 7, 3, 15, 38, 14, 427363)
+
+y = datetime.utc.now()
+Traceback (most recent call last):
+
+  File "<ipython-input-223-5571027c7bd7>", line 1, in <module>
+    y = datetime.utc.now()
+
+AttributeError: module 'datetime' has no attribute 'utc'
+
+
+
+
+y
+Traceback (most recent call last):
+
+  File "<ipython-input-224-9063a9f0e032>", line 1, in <module>
+    y
+
+NameError: name 'y' is not defined
+
+
+
+
+x
+Out[225]: datetime.datetime(2019, 7, 3, 15, 38, 14, 427363)
+
+date_time = x.strftime("%m/%d/%Y, %H:%M:%S")
+print("date and time:",date_time)
+date and time: 07/03/2019, 15:38:14
+
